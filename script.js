@@ -1,22 +1,3 @@
-barba.init({
-  sync: true,
-  transitions: [
-    {
-      name: "opacity-transition",
-      leave(data) {
-        return gsap.to(data.current.container, {
-          opacity: 0,
-        });
-      },
-      enter(data) {
-        return gsap.from(data.next.container, {
-          opacity: 0,
-        });
-      },
-    },
-  ],
-});
-
 const tl = gsap.timeline();
 
 tl.to(".postAnimation", { duration: 0, display: "none" })
@@ -38,4 +19,23 @@ tl.to(".postAnimation", { duration: 0, display: "none" })
   .from("header", { opacity: 0, y: -300, duration: 0.8 })
   .from("footer", { opacity: 0, duration: 0.8 })
   .from(".infoContainer", { duration: 1, y: 100, opacity: 0, stagger: 0.2 })
-  .to("introAnimation", { display: "none" });
+  .to(".introAnimation", { display: "none" });
+
+barba.init({
+  sync: true,
+  transitions: [
+    {
+      name: "opacity-transition",
+      leave(data) {
+        return gsap.to(data.current.container, {
+          opacity: 0,
+        });
+      },
+      enter(data) {
+        return gsap.from(data.next.container, {
+          opacity: 0,
+        });
+      },
+    },
+  ],
+});
