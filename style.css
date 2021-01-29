@@ -1,0 +1,239 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif;
+  background-color: #f3f2f3;
+  color: #2f4858;
+}
+
+.introAnimation {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.postAnimation {
+  position: relative;
+  z-index: 10;
+}
+
+header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.home-main {
+  min-height: 80vh;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #50d1d8;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.infoContainer h3 {
+  font-size: 1.5rem;
+  margin: 2rem auto;
+}
+
+.disney-image {
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-3deg);
+}
+
+.disney-image:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+.head-image {
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(3deg);
+}
+
+.head-image:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+.orson-image {
+  object-fit: cover;
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-1deg);
+}
+
+.orson-image:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Pages */
+
+.view-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+
+.view-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.view-block {
+  width: 90%;
+}
+
+.view-image {
+  width: 75%;
+  object-fit: cover;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.view-image:hover {
+  transform: scale(1.1);
+}
+
+.view-textBlock {
+  width: 300px;
+}
+
+.back-btn-container {
+  margin: 1rem auto;
+}
+
+.back-btn-container a button {
+  border-radius: 20px;
+  background-color: #50d1d8;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 10vh;
+}
+
+@media screen and (min-width: 769px) {
+  .home-main {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    place-items: center;
+    margin: 1rem auto;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 2rem auto;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .infoContainer {
+    padding: 2rem;
+    width: 350px;
+    height: 500px;
+  }
+
+  .disney-image {
+    width: 350px;
+    height: 100%;
+  }
+  .head-image {
+    width: 350px;
+    height: 100%;
+  }
+  .orson-image {
+    width: 350px;
+    height: 100%;
+  }
+
+  .view-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 75%;
+  }
+
+  .view-block {
+    width: 500px;
+    margin: auto;
+  }
+
+  .view-title {
+    font-size: 3rem;
+    color: #50d1d8;
+  }
+
+  .view-text {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
